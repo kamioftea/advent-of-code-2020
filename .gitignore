@@ -2,3 +2,4 @@
 **/*.rs.bk
 /.idea/
 /advent-of-code-2020.iml
+/res/
