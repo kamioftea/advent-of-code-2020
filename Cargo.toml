@@ -1,0 +1,6 @@
+[package]
+name = "advent-of-code-2020"
+version = "0.1.0"
+authors = ["Jeff Horton <jeff@goblinoid.co.uk>"]
+
+[dependencies]
