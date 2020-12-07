@@ -1,5 +1,6 @@
 mod day_1;
 mod day_2;
+mod day_3;
 
 extern crate core;
 
@@ -12,6 +13,7 @@ fn main() {
     match day {
         1 => day_1::run(),
         2 => day_2::run(),
+        3 => day_3::run(),
         _ => println!("Invalid day: {}", day)
     }
 }
