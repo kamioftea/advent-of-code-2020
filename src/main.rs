@@ -17,6 +17,7 @@ fn main() {
         2 => day_2::run(),
         3 => day_3::run(),
         4 => day_4::run(),
+        5 => day_5::run(),
         _ => println!("Invalid day: {}", day)
     }
 }
