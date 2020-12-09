@@ -6,3 +6,4 @@ authors = ["Jeff Horton <jeff@goblinoid.co.uk>"]
 [dependencies]
 text_io = "0.1.8"
 regex = "1.4.2"
+im = "15.0.0"
