@@ -1,7 +1,8 @@
 use std::fs;
 
 pub fn run() {
-    let mut ints = read_to_ints("res/day-1-input");
+    let contents = fs::read_to_string("res/day-1-input").expect("Failed to read file");
+    let mut ints = read_to_ints(contents.as_str());
 
     let (a, b) = find_pair_sum(&mut ints, 2020).unwrap();
     println!("{} x {} = {}", a, b, a * b);
@@ -10,8 +11,7 @@ pub fn run() {
     println!("{} x {} x {} = {}", a, b, c, a * b * c);
 }
 
-fn read_to_ints(filename: &str) -> Vec<i32> {
-    let contents = fs::read_to_string(filename).expect("Failed to read file");
+fn read_to_ints(contents: &str) -> Vec<i32> {
     return contents.lines().flat_map(|line| line.parse::<i32>().ok()).collect();
 }
 
@@ -86,10 +86,15 @@ mod tests {
 
     #[test]
     fn can_parse_file() {
-        let ints = read_to_ints("res/day-1-input");
-        assert_eq!(ints.len(), 200);
+        let ints = read_to_ints("1953
+2006
+1926
+1946
+1722
+1776");
+        assert_eq!(ints.len(), 6);
         assert_eq!(ints.get(0), Some(&1953i32));
-        assert_eq!(ints.get(199), Some(&1866i32));
+        assert_eq!(ints.get(5), Some(&1776i32));
     }
 
     #[test]
