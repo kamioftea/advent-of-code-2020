@@ -7,6 +7,7 @@ mod day_6;
 mod day_7;
 mod day_8;
 mod day_9;
+mod day_10;
 
 trait Solution {
     fn run() -> () where Self: Sized;
@@ -24,7 +25,7 @@ extern crate proc_macro;
 extern crate im;
 
 fn main() {
-    print!("Which day? ");
+    print!("Which day? (0 to run all): ");
     io::stdout().flush().unwrap();
 
     let day: i32 = read!();
@@ -37,7 +38,8 @@ fn main() {
         Box::new(|| day_6::run()),
         Box::new(|| day_7::run()),
         Box::new(|| day_8::run()),
-        Box::new(|| day_9::run())
+        Box::new(|| day_9::run()),
+        Box::new(|| day_10::run())
     );
 
     let start = Instant::now();
