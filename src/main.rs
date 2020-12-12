@@ -8,6 +8,7 @@ mod day_7;
 mod day_8;
 mod day_9;
 mod day_10;
+mod day_11;
 
 trait Solution {
     fn run() -> () where Self: Sized;
@@ -39,16 +40,18 @@ fn main() {
         Box::new(|| day_7::run()),
         Box::new(|| day_8::run()),
         Box::new(|| day_9::run()),
-        Box::new(|| day_10::run())
+        Box::new(|| day_10::run()),
+        Box::new(|| day_11::run())
     );
 
     let start = Instant::now();
     match days.get((day - 1) as usize) {
         Some(solution) => solution(),
         None if day == 0 => days.iter().enumerate().for_each(|(i, solution)| {
+            let start = Instant::now();
             println!("==== Day {} ====", i + 1);
             solution();
-            println!();
+            println!("-- took {:.2?}", start.elapsed());
         }),
         None => println!("Invalid Day {}", day)
     }
