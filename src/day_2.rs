@@ -61,6 +61,7 @@ fn is_valid_ot(policy: &Policy, password: &str) -> bool {
 mod tests {
     use day_2::{parse_line, Policy, is_valid_sr, is_valid_ot};
 
+    //noinspection SpellCheckingInspection
     #[test]
     fn can_parse_line() {
         assert_eq!(parse_line("1-3 a: abcde"), Some((Policy { min: 1, max: 3, letter: 'a' }, "abcde")));
@@ -69,6 +70,7 @@ mod tests {
         assert_eq!(parse_line("29 c: ccccccccc"), None);
     }
 
+    //noinspection SpellCheckingInspection
     #[test]
     fn can_validate_sled_rental() {
         assert_eq!(is_valid_sr(&Policy { min: 1, max: 3, letter: 'a' }, "abcde"), true);
@@ -76,6 +78,7 @@ mod tests {
         assert_eq!(is_valid_sr(&Policy { min: 2, max: 9, letter: 'c' }, "ccccccccc"), true);
     }
 
+    //noinspection SpellCheckingInspection
     #[test]
     fn can_validate_official_toboggan() {
         assert_eq!(is_valid_ot(&Policy { min: 1, max: 3, letter: 'a' }, "abcde"), true);

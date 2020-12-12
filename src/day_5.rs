@@ -57,6 +57,7 @@ fn find_seat(allocated_ids: &HashSet<usize>) -> Option<usize> {
 mod tests {
     use day_5::{Seat, find_seat};
 
+    //noinspection SpellCheckingInspection
     #[test]
     fn can_parse_seat_code() {
         assert_eq!(Seat { id: 357 }, Seat::from_line("FBFBBFFRLR"));
@@ -65,6 +66,7 @@ mod tests {
         assert_eq!(Seat { id: 820 }, Seat::from_line("BBFFBBFRLL"));
     }
 
+    //noinspection SpellCheckingInspection
     #[test]
     fn can_extract_row() {
         assert_eq!(44, Seat::from_line("FBFBBFFRLR").row());
@@ -73,6 +75,7 @@ mod tests {
         assert_eq!(102, Seat::from_line("BBFFBBFRLL").row());
     }
 
+    //noinspection SpellCheckingInspection
     #[test]
     fn can_extract_column() {
         assert_eq!(5, Seat::from_line("FBFBBFFRLR").column());
