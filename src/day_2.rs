@@ -1,5 +1,5 @@
-//! This is my solution for [Advent of Code - Day 2](https://adventofcode.com/2020/day/2)
-//! Password Philosophy
+//! This is my solution for [Advent of Code - Day 2](https://adventofcode.com/2020/day/2) -
+//! _Password Philosophy_
 //!
 //! Today's challenges were themed around validating data. The puzzle input was a 1000 lines in a
 //! specific format. The first part of each line could be interpreted as a policy that the rest of

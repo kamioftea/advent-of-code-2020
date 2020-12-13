@@ -1,5 +1,5 @@
-//! This is my solution for [Advent of Code - Day 1](https://adventofcode.com/2020/day/1)
-//! Report Repair
+//! This is my solution for [Advent of Code - Day 1](https://adventofcode.com/2020/day/1) -
+//! _Report Repair_
 //!
 //! The challenge was to determine which numbers in the input file summed to 2020, part 1 asking for
 //! two numbers, part 2 asking for three.
