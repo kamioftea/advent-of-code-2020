@@ -267,7 +267,7 @@ iyr:2010 hgt:158cm hcl:#b6652a ecl:blu byr:1944 eyr:2021 pid:093154719";
             invalid_passports
         );
 
-        let valid_passports: Vec<bool> =
+        let valids: Vec<bool> =
             parse_passports(PART_2_VALID)
                 .iter()
                 .map(|pass| pass.is_valid())
@@ -275,7 +275,7 @@ iyr:2010 hgt:158cm hcl:#b6652a ecl:blu byr:1944 eyr:2021 pid:093154719";
 
         assert_eq!(
             vec!(true, true, true, true),
-            valid_passports
+            valids
         )
     }
 }
