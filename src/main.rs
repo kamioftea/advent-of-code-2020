@@ -11,10 +11,6 @@ mod day_10;
 mod day_11;
 mod day_12;
 
-trait Solution {
-    fn run() -> () where Self: Sized;
-}
-
 use std::time::Instant;
 use std::io::{self, Write};
 
