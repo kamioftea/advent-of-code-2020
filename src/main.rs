@@ -11,6 +11,7 @@ mod day_10;
 mod day_11;
 mod day_12;
 mod day_13;
+mod day_14;
 
 trait Solution {
     fn run() -> () where Self: Sized;
@@ -26,6 +27,7 @@ extern crate text_io;
 extern crate regex;
 extern crate proc_macro;
 extern crate im;
+extern crate either;
 
 fn main() {
     print!("Which day? (0 to run all): ");
@@ -45,7 +47,8 @@ fn main() {
         Box::new(|| day_10::run()),
         Box::new(|| day_11::run()),
         Box::new(|| day_12::run()),
-        Box::new(|| day_13::run())
+        Box::new(|| day_13::run()),
+        Box::new(|| day_14::run())
     );
 
     let start = Instant::now();
