@@ -12,10 +12,7 @@ mod day_11;
 mod day_12;
 mod day_13;
 mod day_14;
-
-trait Solution {
-    fn run() -> () where Self: Sized;
-}
+mod day_15;
 
 use std::time::Instant;
 use std::io::{self, Write};
@@ -48,7 +45,8 @@ fn main() {
         Box::new(|| day_11::run()),
         Box::new(|| day_12::run()),
         Box::new(|| day_13::run()),
-        Box::new(|| day_14::run())
+        Box::new(|| day_14::run()),
+        Box::new(|| day_15::run())
     );
 
     let start = Instant::now();
